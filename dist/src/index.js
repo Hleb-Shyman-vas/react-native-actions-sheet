@@ -695,7 +695,7 @@ export default forwardRef(function ActionSheet(_a, ref) {
                             100,
                     width: '100%',
                     position: 'absolute',
-                    zIndex: 2,
+                    zIndex: -1,
                     backgroundColor: overlayColor,
                     opacity: defaultOverlayOpacity
                 }}/>) : null}
