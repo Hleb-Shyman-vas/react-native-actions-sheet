@@ -107,7 +107,9 @@ export default forwardRef(function ActionSheet(_a, ref) {
             ? initialValue.current
             : 0;
         notifyOffsetChange(correctedValue);
-        Animated.spring(animations.translateY, __assign(__assign({ toValue: initialValue.current, useNativeDriver: true }, config), { velocity: typeof velocity !== 'number' ? undefined : velocity })).start();
+        setTimeout(() => {
+            Animated.spring(animations.translateY, __assign(__assign({ toValue: initialValue.current, useNativeDriver: true }, config), { velocity: typeof velocity !== 'number' ? undefined : velocity })).start();
+        }, 100);
     }, 
     // eslint-disable-next-line react-hooks/exhaustive-deps
     [animated, props.openAnimationConfig]);
